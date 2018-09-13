@@ -1,0 +1,159 @@
+UNIX
+
+	untar a tar.gz
+===========================
+tar -xzf file1.tar.gz
+===========================
+
+
+
+installing a tar gz file ( Arch linux installs using tar ball)
+==========================================================
+1. download the tar gz file 
+2. untar it # tar -xzf file1.tar.gz
+3. find the executable (possibly a py file) or look for a README or run the autogen.sh file??
+4. sudo ln -s /path/to/executable.py /usr/bin/keyword1 ## this places the shortcut for executable in /usr/bin folder
+5. which keyword1 ## this should output the usr/bin/ address
+6. Now run the executable using the keyword -- arguments 
+==========================================================
+
+What is openBSD?
+==============================
+It is an OS. I dont use this OS
+==============================
+
+
+How to install packages in Arch Linux ?
+=====================================
+apt-get WILL NOT WORK !
+pacman has to be used. 
+=====================================
+
+Clear terminal text
+====================================
+clear
+====================================
+
+Output first 100 lines
+===================================
+head -10 bar.txthead 
+===================================
+
+PYTHON
+
+splitting a column 
+================================
+df['A'], df['B'] = df['AB'].str.split('_', 1).str   ### AB is the column being split into A&B and _ is the separator 
+================================
+
+dropping a column 
+===============================
+df.drop('col1',axis=1).              
+df.drop(['col1','col2'],axis=1)  #axis=1 means vertical 
+===============================
+
+
+string(str) column to integer(int)
+==========================
+minor['B']= minor['B'].map(lambda x: int(x))
+
+minor['B']= int(minor['B']). ### will not WORK ## Series to int error
+==========================
+
+
+Increase size of print area in terminal using pd
+==========================
+pd.set_option('display.width', 500)
+==========================
+
+
+Using lambda to create functions
+==========================
+func1= lambda x: x**2
+func1(2)
+#4
+==========================
+
+
+
+Pycharm Keyboard shortcuts 
+=================================
+select and execute in console -- alt+e
+slect whole line 			  -- triple click mouse 
+select a word 				  -- double click mouse
+
+
+
+GIT 
+========================================================================
+1-- working directory 
+2-- staging area
+3-- local commit area
+4-- remote
+
+
+
+save git diff in color 
+======================
+git diff --color > foo.txt
+======================
+
+adding files in git 
+=====================
+git add . 
+=====================
+
+How to undo a git add?
+=====================
+git reset 
+=====================
+
+what is git stash?
+=====================
+takes tracked changes (these havent been added)+ staged changes(these have been added) and saves them some place else
+=====================
+
+How to only add modified but ignore untracked?
+=========================================================================================
+git add -u   #This adds modified and deleted but ideally untracked files should be in git ignore
+=========================================================================================
+
+What is origin/mainline or origin/master?
+=========================================
+This is the remote repository (code.amazon.com or github.com)
+=========================================
+
+How to see difference between remote and local commit (between 4 & 3)
+=======================================================================================
+git diff origin/mainline mainline 
+git diff mainline origin/mainline ### This is WRONG it is the other way around. 
+
+For a particular file 
+git diff origin/mainline:bin/generate_downsample.py mainline:bin/generate_downsample.py 
+=======================================================================================
+
+
+How to add a change to the same commit without making a new commit?
+=======================================================================================
+git add file1.py
+git commit --amend --no-edit
+=======================================================================================
+
+
+What difference by default does a git diff show ?
+=======================================================================================
+
+
+=======================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
