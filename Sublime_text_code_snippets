@@ -143,8 +143,61 @@ git commit --amend --no-edit
 What difference by default does a git diff show ?
 =======================================================================================
 
+=======================================================================================
+
+
+How to combine commits together
+=======================================================================================
+git reset --soft HEAD~3
+ git commit -m "combine three commits. 1. home directory change 2.create directories at once place 3.change attributes to dict and ML parameters outside" 
 
 =======================================================================================
+
+
+Initialize a git repo and push to github 
+==========================================
+git init inside folder
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/04pallav/sCodeSnips.git
+
+# change remote 
+git remote set-url origin git@bitbucket.org:04pallav/scodesnips.git
+
+git push -u origin master 
+
+if failed due to ssh issue, set up ssh !!
+ssh-keygen  (generates a key/pair)  The public key is saved 
+ssh-add -K ~/.ssh/<private_key_file> (mac)
+
+Add this private key in the website or server
+
+even after this I wasnt able to push somehow! 
+
+
+
+
+what is ssh ?
+==================
+Server=host
+
+
+
+1. Secure shell is a method (network protocol) for client(local machine) to connect a server(host) and authenticate SECURELY.
+2. Servers public key (host key) is a key which server distributes to the clients. 
+3. Clients use this public key to encrypt data and anything which is encrypted by this public key can only be decrypted by a private key! ( this is called asymmetric encryption)
+3. When you connect for the first time you give your PUBLIC key to server. server takes "some data" and encrypts it using YOUR Public key. anything encrypted with YOUR public key can only be opened with YOUR private key!! which no one else has so now you have that data! Now you send this data back and server knows that it is the same data i sent and so you have a private key for your public key! 
+3. this method ensures security!
+
+ssh clients examples : putty,
+
+
+
+
+
+
+
+
 
 
 
